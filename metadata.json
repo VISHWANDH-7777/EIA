@@ -1,0 +1,6 @@
+{
+  "name": "Smart EIA — Environmental Impact Assessment and Monitoring System",
+  "description": "Comprehensive environmental impact assessment, sensor monitoring, rule-based risk evaluation, compliance tracking, and mitigation system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

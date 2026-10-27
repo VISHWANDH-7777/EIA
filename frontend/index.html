@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart EIA — Environmental Impact Assessment and Monitoring System</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-icon">EIA</div>
+        <div>
+          <h1>Smart EIA</h1>
+          <p>Environmental Impact Assessment & Surveillance System</p>
+        </div>
+      </div>
+      <div>
+        <span class="badge badge-low">Rule-Based Matrix</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-link active" data-tab="dashboard">Dashboard</a>
+      <a class="nav-link" data-tab="projects">Projects</a>
+      <a class="nav-link" data-tab="monitoring">Monitoring</a>
+      <a class="nav-link" data-tab="map">GIS Map</a>
+      <a class="nav-link" data-tab="risk">Risk Assessment</a>
+      <a class="nav-link" data-tab="mitigation">Mitigation</a>
+      <a class="nav-link" data-tab="stakeholders">Inspections & Feedback</a>
+      <a class="nav-link" data-tab="alerts">Alerts & Compliance</a>
+    </div>
+  </nav>
+
+  <!-- Main Content Areas -->
+  <main>
+    <!-- 1. Dashboard -->
+    <div id="tab-dashboard" class="tab-pane active">
+      <div class="kpi-grid">
+        <div class="card">
+          <div class="card-title">Registered Projects</div>
+          <div class="card-value" id="dash-projects-count">0</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Threshold Breaches</div>
+          <div class="card-value" id="dash-alerts-count" style="color: var(--risk-high)">0</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Pending Mitigations</div>
+          <div class="card-value" id="dash-mitigations-count">0</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Compliance Records</div>
+          <div class="card-value" id="dash-compliance-count" style="color: var(--primary)">0</div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom: 20px;">
+        <h3>Latest Environmental Readings</h3>
+        <table id="dash-latest-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Category</th>
+              <th>Value</th>
+              <th>Source</th>
+              <th>Timestamp</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 2. Projects -->
+    <div id="tab-projects" class="tab-pane">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <h2>Registered Projects</h2>
+        <button class="btn btn-primary" id="btn-new-project">+ Register Project</button>
+      </div>
+      <div id="projects-list" class="kpi-grid"></div>
+    </div>
+
+    <!-- 3. Monitoring -->
+    <div id="tab-monitoring" class="tab-pane">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <h2>Environmental Monitoring Readings</h2>
+        <button class="btn btn-primary" id="btn-record-reading">+ Record Reading</button>
+      </div>
+      <table id="readings-table">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Value</th>
+            <th>Source</th>
+            <th>Timestamp</th>
+            <th>Validation</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- 4. Map -->
+    <div id="tab-map" class="tab-pane">
+      <h2>Environmental Monitoring Map</h2>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">
+        OpenStreetMap & Leaflet with project locations and active stations
+      </p>
+      <div id="map"></div>
+    </div>
+
+    <!-- 5. Risk Assessment -->
+    <div id="tab-risk" class="tab-pane">
+      <h2>Rule-Based Environmental Risk Assessment</h2>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">
+        Deterministic Statutory Assessment Matrix (Zero AI / Non-Probabilistic)
+      </p>
+      <div class="card" id="risk-result-card" style="margin-bottom: 20px;">
+        <p>Select a project to evaluate against statutory thresholds.</p>
+      </div>
+    </div>
+
+    <!-- 6. Mitigation -->
+    <div id="tab-mitigation" class="tab-pane">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <h2>Mitigation Task Tracker</h2>
+        <button class="btn btn-primary" id="btn-new-mitigation">+ New Task</button>
+      </div>
+      <div id="mitigation-list"></div>
+    </div>
+
+    <!-- 7. Stakeholders (Inspections & Feedback) -->
+    <div id="tab-stakeholders" class="tab-pane">
+      <h2>Field Inspections & Public Feedback</h2>
+      <div id="inspections-list" style="margin-top:16px;"></div>
+    </div>
+
+    <!-- 8. Alerts & Compliance -->
+    <div id="tab-alerts" class="tab-pane">
+      <h2>Threshold Alerts & Compliance</h2>
+      <div id="alerts-list" style="margin-top:16px;"></div>
+    </div>
+  </main>
+
+  <footer>
+    Smart EIA System &bull; Statutory Environmental Surveillance &bull; Zero Black-Box AI
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/monitoring.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/risk.js"></script>
+  <script src="js/mitigation.js"></script>
+  <script src="js/stakeholders.js"></script>
+  <script src="js/alerts.js"></script>
+  <script>
+    // Tab switching logic
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+        link.classList.add('active');
+        const tabId = link.getAttribute('data-tab');
+        const target = document.getElementById(`tab-${tabId}`);
+        if (target) target.classList.add('active');
+        if (tabId === 'map' && window.initMap) window.initMap();
+      });
+    });
+  </script>
+</body>
+</html>

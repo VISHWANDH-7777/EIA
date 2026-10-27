@@ -1,0 +1,620 @@
+{
+  "projects": [
+    {
+      "id": "proj-001",
+      "name": "Metro Rail Line 4 Extension Corridor",
+      "type": "Transportation Infrastructure",
+      "location": "Metro District Sector 7",
+      "latitude": 37.7749,
+      "longitude": -122.4194,
+      "description": "14.2 km dual-track underground & elevated transit corridor connecting Sector 7 with Regional Hub.",
+      "status": "Active",
+      "createdAt": "2026-01-15T08:00:00.000Z",
+      "updatedAt": "2026-10-25T14:20:00.000Z"
+    },
+    {
+      "id": "proj-002",
+      "name": "Harbor Estuary Ecological Dredging & Hydro-Clean",
+      "type": "Marine & Water Resources",
+      "location": "Estuary Bay Point",
+      "latitude": 37.8044,
+      "longitude": -122.2712,
+      "description": "Environmental channel deepening and sediment remediation program for commercial harbor navigation.",
+      "status": "Active",
+      "createdAt": "2026-03-10T09:30:00.000Z",
+      "updatedAt": "2026-10-26T07:15:00.000Z"
+    },
+    {
+      "id": "proj-003",
+      "name": "Highland Wind Energy Park & Transmission Grid",
+      "type": "Renewable Energy",
+      "location": "Northern Ridge Crest",
+      "latitude": 37.6879,
+      "longitude": -121.9167,
+      "description": "45-turbine utility-scale wind installation with 115kV substation intertie and ecological buffer zones.",
+      "status": "Planning",
+      "createdAt": "2026-06-01T11:00:00.000Z",
+      "updatedAt": "2026-10-20T16:00:00.000Z"
+    }
+  ],
+  "stations": [
+    {
+      "id": "st-01",
+      "projectId": "proj-001",
+      "name": "North Tunnel Portal Air & Acoustic Station",
+      "latitude": 37.7758,
+      "longitude": -122.4182,
+      "parameters": [
+        "PM2.5",
+        "PM10",
+        "NO2",
+        "Noise_Day",
+        "Noise_Night"
+      ],
+      "stationType": "Fixed Continuous",
+      "status": "Active",
+      "lastActive": "2026-10-26T09:00:00.000Z"
+    },
+    {
+      "id": "st-02",
+      "projectId": "proj-001",
+      "name": "Sector 7 Residential Perimeter Buffer",
+      "latitude": 37.7735,
+      "longitude": -122.4215,
+      "parameters": [
+        "PM2.5",
+        "Noise_Day",
+        "Noise_Night"
+      ],
+      "stationType": "Fixed Continuous",
+      "status": "Active",
+      "lastActive": "2026-10-26T08:55:00.000Z"
+    },
+    {
+      "id": "st-03",
+      "projectId": "proj-002",
+      "name": "Estuary Marine Spoil Basin Monitor",
+      "latitude": 37.8055,
+      "longitude": -122.2695,
+      "parameters": [
+        "pH",
+        "Turbidity",
+        "DO"
+      ],
+      "stationType": "Fixed Continuous",
+      "status": "Active",
+      "lastActive": "2026-10-26T09:10:00.000Z"
+    },
+    {
+      "id": "st-04",
+      "projectId": "proj-003",
+      "name": "Ridge Crest Acoustic Boundary Tower 04",
+      "latitude": 37.6892,
+      "longitude": -121.915,
+      "parameters": [
+        "Noise_Day",
+        "Noise_Night",
+        "PM10"
+      ],
+      "stationType": "Fixed Continuous",
+      "status": "Active",
+      "lastActive": "2026-10-26T08:30:00.000Z"
+    }
+  ],
+  "readings": [
+    {
+      "projectId": "proj-001",
+      "category": "air",
+      "parameter": "PM2.5",
+      "value": 29.5,
+      "unit": "µg/m³",
+      "timestamp": "2026-10-26T16:38:20.697Z",
+      "source": "manual",
+      "isValid": true,
+      "notes": "Calibrated nephelometer test",
+      "id": "rd-mvphdicp-4gb4"
+    },
+    {
+      "id": "rd-01",
+      "projectId": "proj-001",
+      "stationId": "st-01",
+      "category": "air",
+      "parameter": "PM2.5",
+      "value": 46.2,
+      "unit": "µg/m³",
+      "timestamp": "2026-10-26T08:30:00.000Z",
+      "source": "sensor",
+      "isValid": true,
+      "notes": "Heavy earth movement around shaft 3B"
+    },
+    {
+      "id": "rd-02",
+      "projectId": "proj-001",
+      "stationId": "st-01",
+      "category": "air",
+      "parameter": "PM10",
+      "value": 122,
+      "unit": "µg/m³",
+      "timestamp": "2026-10-26T08:30:00.000Z",
+      "source": "sensor",
+      "isValid": true
+    },
+    {
+      "id": "rd-03",
+      "projectId": "proj-001",
+      "stationId": "st-01",
+      "category": "air",
+      "parameter": "NO2",
+      "value": 68.4,
+      "unit": "µg/m³",
+      "timestamp": "2026-10-26T08:30:00.000Z",
+      "source": "sensor",
+      "isValid": true
+    },
+    {
+      "id": "rd-04",
+      "projectId": "proj-001",
+      "stationId": "st-01",
+      "category": "noise",
+      "parameter": "Noise_Day",
+      "value": 69.8,
+      "unit": "dBA",
+      "timestamp": "2026-10-26T08:45:00.000Z",
+      "source": "sensor",
+      "isValid": true,
+      "notes": "Hydraulic breaker operating at south vent"
+    },
+    {
+      "id": "rd-05",
+      "projectId": "proj-001",
+      "stationId": "st-02",
+      "category": "air",
+      "parameter": "PM2.5",
+      "value": 24.1,
+      "unit": "µg/m³",
+      "timestamp": "2026-10-26T08:50:00.000Z",
+      "source": "sensor",
+      "isValid": true
+    },
+    {
+      "id": "rd-06",
+      "projectId": "proj-001",
+      "stationId": "st-02",
+      "category": "noise",
+      "parameter": "Noise_Day",
+      "value": 61.3,
+      "unit": "dBA",
+      "timestamp": "2026-10-26T08:50:00.000Z",
+      "source": "sensor",
+      "isValid": true
+    },
+    {
+      "id": "rd-07",
+      "projectId": "proj-002",
+      "stationId": "st-03",
+      "category": "water",
+      "parameter": "pH",
+      "value": 7.6,
+      "unit": "pH",
+      "timestamp": "2026-10-26T09:00:00.000Z",
+      "source": "manual",
+      "isValid": true,
+      "notes": "Certified laboratory grab sample test"
+    },
+    {
+      "id": "rd-08",
+      "projectId": "proj-002",
+      "stationId": "st-03",
+      "category": "water",
+      "parameter": "Turbidity",
+      "value": 8.4,
+      "unit": "NTU",
+      "timestamp": "2026-10-26T09:00:00.000Z",
+      "source": "sensor",
+      "isValid": true,
+      "notes": "Dredge cutter suction head wake"
+    },
+    {
+      "id": "rd-09",
+      "projectId": "proj-002",
+      "stationId": "st-03",
+      "category": "water",
+      "parameter": "DO",
+      "value": 6.2,
+      "unit": "mg/L",
+      "timestamp": "2026-10-26T09:00:00.000Z",
+      "source": "sensor",
+      "isValid": true
+    },
+    {
+      "id": "rd-10",
+      "projectId": "proj-003",
+      "stationId": "st-04",
+      "category": "noise",
+      "parameter": "Noise_Day",
+      "value": 48.6,
+      "unit": "dBA",
+      "timestamp": "2026-10-26T08:15:00.000Z",
+      "source": "sensor",
+      "isValid": true
+    }
+  ],
+  "riskAssessments": [
+    {
+      "riskLevel": "High",
+      "totalEvaluated": 6,
+      "breachCount": 2,
+      "criticalBreachCount": 0,
+      "breaches": [
+        {
+          "parameter": "PM2.5",
+          "category": "air",
+          "readingValue": 46.2,
+          "unit": "µg/m³",
+          "thresholdValue": "Max 35 µg/m³",
+          "ruleId": "AIR-R01",
+          "ruleTitle": "Particulate Matter 2.5 Daily Exposure Standard",
+          "standardReference": "National Ambient Air Quality Standard (NAAQS) 24h limit",
+          "isCritical": false,
+          "explanation": "Reading of 46.2 µg/m³ breaches statutory limit (Max 35 µg/m³) by +32.0% above maximum threshold. Rule: Particulate Matter 2.5 Daily Exposure Standard (National Ambient Air Quality Standard (NAAQS) 24h limit).",
+          "recommendedMitigation": "Deploy mobile wet mist dust suppression cannons and suspend earth excavation operations in designated sectors."
+        },
+        {
+          "parameter": "Noise_Day",
+          "category": "noise",
+          "readingValue": 69.8,
+          "unit": "dBA",
+          "thresholdValue": "Max 65 dBA",
+          "ruleId": "NOI-R01",
+          "ruleTitle": "Daytime Acoustic Boundary Limit (07:00 - 22:00)",
+          "standardReference": "Noise Pollution (Regulation and Control) Rules",
+          "isCritical": false,
+          "explanation": "Reading of 69.8 dBA breaches statutory limit (Max 65 dBA) by +7.4% above maximum threshold. Rule: Daytime Acoustic Boundary Limit (07:00 - 22:00) (Noise Pollution (Regulation and Control) Rules).",
+          "recommendedMitigation": "Erect temporary acoustic noise absorption hoarding panels (min 3.5m height) around high-decibel cutting and drilling zones."
+        }
+      ],
+      "methodology": "Deterministic Rule-Based Assessment Matrix (Zero Machine Learning / Non-Probabilistic)",
+      "ruleSetVersion": "v2.4-EIA-Statutory",
+      "timestamp": "2026-10-26T16:24:13.115Z",
+      "summary": "High Environmental Risk: 2 threshold breach(es) detected, including 0 critical violation(s). Immediate mitigation enforcement required.",
+      "id": "ra-proj-001-init",
+      "projectId": "proj-001"
+    },
+    {
+      "riskLevel": "Medium",
+      "totalEvaluated": 3,
+      "breachCount": 1,
+      "criticalBreachCount": 0,
+      "breaches": [
+        {
+          "parameter": "Turbidity",
+          "category": "water",
+          "readingValue": 8.4,
+          "unit": "NTU",
+          "thresholdValue": "Max 5 NTU",
+          "ruleId": "WAT-R02",
+          "ruleTitle": "Sediment and Suspended Solids Turbidity Limit",
+          "standardReference": "Surface Water Quality Standard Class II",
+          "isCritical": false,
+          "explanation": "Reading of 8.4 NTU breaches statutory limit (Max 5 NTU) by +68.0% above maximum threshold. Rule: Sediment and Suspended Solids Turbidity Limit (Surface Water Quality Standard Class II).",
+          "recommendedMitigation": "Inspect and replace silt fence geotextiles; add flocculant dosage in sediment retention ponds."
+        }
+      ],
+      "methodology": "Deterministic Rule-Based Assessment Matrix (Zero Machine Learning / Non-Probabilistic)",
+      "ruleSetVersion": "v2.4-EIA-Statutory",
+      "timestamp": "2026-10-26T16:24:13.115Z",
+      "summary": "Medium Environmental Risk: 1 threshold breach detected. Corrective actions must be logged and monitored.",
+      "id": "ra-proj-002-init",
+      "projectId": "proj-002"
+    },
+    {
+      "riskLevel": "Low",
+      "totalEvaluated": 1,
+      "breachCount": 0,
+      "criticalBreachCount": 0,
+      "breaches": [],
+      "methodology": "Deterministic Rule-Based Assessment Matrix (Zero Machine Learning / Non-Probabilistic)",
+      "ruleSetVersion": "v2.4-EIA-Statutory",
+      "timestamp": "2026-10-26T16:24:13.115Z",
+      "summary": "All 1 evaluated parameters conform strictly to environmental baseline thresholds.",
+      "id": "ra-proj-003-init",
+      "projectId": "proj-003"
+    }
+  ],
+  "mitigationActions": [
+    {
+      "id": "mit-001",
+      "projectId": "proj-001",
+      "title": "Deploy Water Mist Dust Cannons at Shaft 3B",
+      "description": "Install 2 high-pressure oscillating mist cannons around heavy truck loading chute to prevent fugitive PM2.5 dispersion.",
+      "responsiblePerson": "Marcus Vance (Site HSE Lead)",
+      "dueDate": "2026-10-27",
+      "status": "In Progress",
+      "evidenceFiles": [],
+      "history": [
+        {
+          "action": "Action logged following AIR-R01 breach alert",
+          "timestamp": "2026-10-26T08:35:00.000Z",
+          "user": "System Alert Engine"
+        },
+        {
+          "action": "Assigned to Site HSE Lead Marcus Vance",
+          "timestamp": "2026-10-26T08:40:00.000Z",
+          "user": "EIA Officer Sarah Lin"
+        }
+      ],
+      "createdAt": "2026-10-26T08:35:00.000Z",
+      "updatedAt": "2026-10-26T08:40:00.000Z"
+    },
+    {
+      "id": "mit-002",
+      "projectId": "proj-001",
+      "title": "Erect Sound Absorption Barrier at South Vent",
+      "description": "Construct 4-meter acoustic vinyl curtain to shield adjacent residential receptors from continuous hydraulic impact noise.",
+      "responsiblePerson": "David Chen (Contractor Acoustic Sup.)",
+      "dueDate": "2026-10-25",
+      "status": "Pending",
+      "evidenceFiles": [],
+      "history": [
+        {
+          "action": "Created task based on NOI-R01 exceedance",
+          "timestamp": "2026-10-24T10:00:00.000Z",
+          "user": "EIA Officer Sarah Lin"
+        }
+      ],
+      "createdAt": "2026-10-24T10:00:00.000Z",
+      "updatedAt": "2026-10-24T10:00:00.000Z"
+    },
+    {
+      "id": "mit-003",
+      "projectId": "proj-002",
+      "title": "Inspect and Repair Silt Curtain Geotextile",
+      "description": "Deploy dive inspection team to realign floating sediment containment curtain south of dredge barge anchor line.",
+      "responsiblePerson": "Elena Rostova (Marine Environmental Mgr)",
+      "dueDate": "2026-10-28",
+      "status": "In Progress",
+      "evidenceFiles": [],
+      "history": [
+        {
+          "action": "Initiated after turbidity rise to 8.4 NTU",
+          "timestamp": "2026-10-26T09:05:00.000Z",
+          "user": "System Alert Engine"
+        }
+      ],
+      "createdAt": "2026-10-26T09:05:00.000Z",
+      "updatedAt": "2026-10-26T09:05:00.000Z"
+    }
+  ],
+  "inspections": [
+    {
+      "id": "insp-001",
+      "projectId": "proj-001",
+      "inspectorName": "Dr. Arthur Pendelton (Govt EIA Inspector)",
+      "inspectionDate": "2026-10-25",
+      "observations": "Inspected perimeter wheel washing trough at gate 4. Water recycling tank functioning. Dust covers on aggregate piles were properly weighted.",
+      "complianceVerdict": "Compliant",
+      "status": "Reviewed",
+      "photos": [],
+      "reviewNotes": "Standard bi-weekly statutory verification completed without citations.",
+      "createdAt": "2026-10-25T15:30:00.000Z"
+    },
+    {
+      "id": "insp-002",
+      "projectId": "proj-002",
+      "inspectorName": "Maya Patel (Regional Water Board)",
+      "inspectionDate": "2026-10-26",
+      "observations": "Sediment plume visible approximately 40m downstream of cutter head due to partial geotextile tear. Requested immediate dive team deployment.",
+      "complianceVerdict": "Non-Compliant",
+      "status": "Submitted",
+      "photos": [],
+      "createdAt": "2026-10-26T09:15:00.000Z"
+    }
+  ],
+  "feedback": [
+    {
+      "id": "fb-001",
+      "projectId": "proj-001",
+      "stakeholderName": "Community Council Rep. Laura Gomez",
+      "email": "laura.gomez@sector7residents.org",
+      "category": "Noise Impact",
+      "comment": "Heavy vibration and drilling sound was audible past 21:30 yesterday evening near the Sector 7 elementary school boundary.",
+      "status": "Under Review",
+      "responseNote": "Investigation opened regarding evening shift noise compliance; contractor acoustic log requested.",
+      "createdAt": "2026-10-25T22:10:00.000Z"
+    },
+    {
+      "id": "fb-002",
+      "projectId": "proj-002",
+      "stakeholderName": "Harbor Marina Berth Holders Assoc.",
+      "email": "dockmaster@baypointmarina.com",
+      "category": "Water & Drainage",
+      "comment": "Noticed slight silt buildup near slipway #4 following dredging vessel maneuvering this morning.",
+      "status": "New",
+      "createdAt": "2026-10-26T08:45:00.000Z"
+    }
+  ],
+  "alerts": [
+    {
+      "id": "alt-001",
+      "projectId": "proj-001",
+      "type": "Threshold Breach",
+      "severity": "High",
+      "parameter": "PM2.5",
+      "message": "PM2.5 reading of 46.2 µg/m³ exceeded 24-hr threshold (35.0 µg/m³) at North Tunnel Portal Station.",
+      "ruleId": "AIR-R01",
+      "isRead": false,
+      "timestamp": "2026-10-26T08:30:00.000Z"
+    },
+    {
+      "id": "alt-002",
+      "projectId": "proj-001",
+      "type": "Threshold Breach",
+      "severity": "Medium",
+      "parameter": "Noise_Day",
+      "message": "Daytime acoustic measurement 69.8 dBA exceeded standard boundary limit (65.0 dBA).",
+      "ruleId": "NOI-R01",
+      "isRead": false,
+      "timestamp": "2026-10-26T08:45:00.000Z"
+    },
+    {
+      "id": "alt-003",
+      "projectId": "proj-001",
+      "type": "Overdue Mitigation",
+      "severity": "High",
+      "message": "Mitigation task \"Erect Sound Absorption Barrier at South Vent\" is overdue (Due date was 2026-10-25).",
+      "isRead": false,
+      "timestamp": "2026-10-26T00:01:00.000Z"
+    },
+    {
+      "id": "alt-004",
+      "projectId": "proj-002",
+      "type": "Threshold Breach",
+      "severity": "Medium",
+      "parameter": "Turbidity",
+      "message": "Turbidity reading of 8.4 NTU exceeded water quality limit (5.0 NTU) in Estuary Marine Spoil Basin.",
+      "ruleId": "WAT-R02",
+      "isRead": true,
+      "timestamp": "2026-10-26T09:00:00.000Z"
+    }
+  ],
+  "compliance": [
+    {
+      "id": "cmp-001",
+      "projectId": "proj-001",
+      "standardTitle": "National Ambient Air Quality Standard (NAAQS) Particulate Cap",
+      "category": "Air Standards",
+      "status": "Non-Compliant",
+      "lastEvaluated": "2026-10-26T08:30:00.000Z",
+      "notes": "PM2.5 breach recorded; dust cannons mitigation pending completion."
+    },
+    {
+      "id": "cmp-002",
+      "projectId": "proj-001",
+      "standardTitle": "Daytime Construction Acoustic Guideline Ordinance 41",
+      "category": "Noise Ordinances",
+      "status": "Pending Review",
+      "lastEvaluated": "2026-10-26T08:45:00.000Z",
+      "notes": "Acoustic fence erection overdue; contractor requested 24h grace period."
+    },
+    {
+      "id": "cmp-003",
+      "projectId": "proj-002",
+      "standardTitle": "Clean Water Act Section 401 Water Quality Certification",
+      "category": "Water Protection",
+      "status": "Non-Compliant",
+      "lastEvaluated": "2026-10-26T09:15:00.000Z",
+      "notes": "Turbidity exceedance and physical tear in silt screen noted in field inspection."
+    },
+    {
+      "id": "cmp-004",
+      "projectId": "proj-003",
+      "standardTitle": "Avian & Ecological Habitat Preservation Protocol",
+      "category": "EIA Approval Conditions",
+      "status": "Compliant",
+      "lastEvaluated": "2026-10-25T16:00:00.000Z",
+      "notes": "Pre-construction nesting surveys verified clear of endangered raptor corridors."
+    }
+  ],
+  "thresholds": {
+    "PM2.5": {
+      "parameter": "PM2.5",
+      "category": "air",
+      "unit": "µg/m³",
+      "maxLimit": 35,
+      "criticalLimit": 55,
+      "ruleId": "AIR-R01",
+      "ruleTitle": "Particulate Matter 2.5 Daily Exposure Standard",
+      "standardReference": "National Ambient Air Quality Standard (NAAQS) 24h limit",
+      "recommendedMitigation": "Deploy mobile wet mist dust suppression cannons and suspend earth excavation operations in designated sectors."
+    },
+    "PM10": {
+      "parameter": "PM10",
+      "category": "air",
+      "unit": "µg/m³",
+      "maxLimit": 150,
+      "criticalLimit": 250,
+      "ruleId": "AIR-R02",
+      "ruleTitle": "Coarse Particulate Matter 10 Limit",
+      "standardReference": "Clean Air Act Title 40 CFR Part 50",
+      "recommendedMitigation": "Enforce vehicle tire washing, install perimeter barrier screening, and apply aggregate covers to uncovered stockpiles."
+    },
+    "NO2": {
+      "parameter": "NO2",
+      "category": "air",
+      "unit": "µg/m³",
+      "maxLimit": 100,
+      "criticalLimit": 150,
+      "ruleId": "AIR-R03",
+      "ruleTitle": "Nitrogen Dioxide Ambient Quality Standard",
+      "standardReference": "WHO Ambient Air Quality Guidelines",
+      "recommendedMitigation": "Inspect diesel machinery for exhaust scrubbers and restrict heavy vehicle idling times to max 3 minutes."
+    },
+    "SO2": {
+      "parameter": "SO2",
+      "category": "air",
+      "unit": "µg/m³",
+      "maxLimit": 75,
+      "criticalLimit": 120,
+      "ruleId": "AIR-R04",
+      "ruleTitle": "Sulfur Dioxide Maximum Exposure Limit",
+      "standardReference": "Industrial Emission Standards Directive",
+      "recommendedMitigation": "Switch auxiliary generators to low-sulfur ULSD fuel and conduct immediate fuel assay inspection."
+    },
+    "pH": {
+      "parameter": "pH",
+      "category": "water",
+      "unit": "pH",
+      "minLimit": 6.5,
+      "maxLimit": 8.5,
+      "criticalLimit": 9.2,
+      "ruleId": "WAT-R01",
+      "ruleTitle": "Effluent and Surface Runoff pH Equilibrium",
+      "standardReference": "Clean Water Act Section 304(a) Criteria",
+      "recommendedMitigation": "Activate neutralizing injection basins (CO2 dosing or limestone buffer beds) prior to settling pond discharge."
+    },
+    "Turbidity": {
+      "parameter": "Turbidity",
+      "category": "water",
+      "unit": "NTU",
+      "maxLimit": 5,
+      "criticalLimit": 25,
+      "ruleId": "WAT-R02",
+      "ruleTitle": "Sediment and Suspended Solids Turbidity Limit",
+      "standardReference": "Surface Water Quality Standard Class II",
+      "recommendedMitigation": "Inspect and replace silt fence geotextiles; add flocculant dosage in sediment retention ponds."
+    },
+    "DO": {
+      "parameter": "DO",
+      "category": "water",
+      "unit": "mg/L",
+      "minLimit": 5,
+      "criticalLimit": 3.5,
+      "ruleId": "WAT-R03",
+      "ruleTitle": "Aquatic Ecosystem Dissolved Oxygen Minimum",
+      "standardReference": "Freshwater Aquatic Life Protection Guideline",
+      "recommendedMitigation": "Activate mechanical aerators and oxygenation bubblers across stream receiving zones; halt organic runoff discharges."
+    },
+    "Noise_Day": {
+      "parameter": "Noise_Day",
+      "category": "noise",
+      "unit": "dBA",
+      "maxLimit": 65,
+      "criticalLimit": 75,
+      "ruleId": "NOI-R01",
+      "ruleTitle": "Daytime Acoustic Boundary Limit (07:00 - 22:00)",
+      "standardReference": "Noise Pollution (Regulation and Control) Rules",
+      "recommendedMitigation": "Erect temporary acoustic noise absorption hoarding panels (min 3.5m height) around high-decibel cutting and drilling zones."
+    },
+    "Noise_Night": {
+      "parameter": "Noise_Night",
+      "category": "noise",
+      "unit": "dBA",
+      "maxLimit": 55,
+      "criticalLimit": 65,
+      "ruleId": "NOI-R02",
+      "ruleTitle": "Nighttime Sensitive Receptor Sound Limit (22:00 - 07:00)",
+      "standardReference": "Environmental Noise Guidelines for Residential Zones",
+      "recommendedMitigation": "Immediately shut down non-essential impact generators, hydraulic pile hammers, and heavy vibratory equipment until daytime hours."
+    }
+  }
+}
